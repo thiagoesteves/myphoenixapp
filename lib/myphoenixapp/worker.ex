@@ -14,7 +14,7 @@ defmodule Myphoenixapp.Worker do
 
   @impl true
   def init(_args) do
-    Logger.info("Initialising App1 server")
+    Logger.info("Initialising #{__MODULE__} server")
 
     interval = 2_000
 
@@ -27,7 +27,7 @@ defmodule Myphoenixapp.Worker do
   def handle_info(:schedule, state) do
     schedule_new_deployment(state.interval)
 
-    Logger.info("Running #{__MODULE__} Scheduler (/•ิ_•ิ)")
+    Logger.info("Running #{__MODULE__} Scheduler (/•ิ_•ิ) 🔥 (╯°□°)╯")
 
     {:noreply, state}
   end
