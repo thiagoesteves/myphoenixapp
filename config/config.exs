@@ -61,7 +61,7 @@ config :logger, :console,
 config :phoenix, :json_library, Jason
 
 # Configure Observer Web retention time for 5 minutes
-config :observer_web, ObserverWeb.Telemetry, 
+config :observer_web, ObserverWeb.Telemetry,
   data_retention_period: :timer.minutes(60),
   mode: :broadcast
 

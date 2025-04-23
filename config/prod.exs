@@ -9,7 +9,8 @@ import Config
 #   cache_static_manifest: "priv/static/cache_manifest.json"
 # Since the application is using the Hot upgrade, the manifest cannot be static
 config :myphoenixapp, MyphoenixappWeb.Endpoint,
-  check_origin: false, # Added for testing
+  # Added for testing
+  check_origin: false,
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",

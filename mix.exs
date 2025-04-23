@@ -4,7 +4,7 @@ defmodule Myphoenixapp.MixProject do
   def project do
     [
       app: :myphoenixapp,
-      version: "0.1.1",
+      version: "0.2.0",
       elixir: "~> 1.14",
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
@@ -63,7 +63,7 @@ defmodule Myphoenixapp.MixProject do
       {:bandit, "~> 1.2"},
       {:jellyfish, "~> 0.2.0"},
       {:telemetry_deployex, "~> 0.1.0-rc4"},
-      {:observer_web, "~> 0.1.0"},
+      {:observer_web, "~> 0.1.0"}
     ]
   end
 
