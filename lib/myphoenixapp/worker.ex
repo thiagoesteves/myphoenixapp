@@ -27,9 +27,15 @@ defmodule Myphoenixapp.Worker do
   def handle_info(:schedule, state) do
     schedule_new_deployment(state.interval)
 
-    Logger.info("Running #{__MODULE__} Scheduler (/•ิ_•ิ) 🔥 (╯°□°)╯")
+    Logger.info("Running #{__MODULE__} Scheduler (/•ิ_•ิ) 🔥 (╯°□°)╯ ##### ")
 
     {:noreply, state}
+  end
+
+  @impl true
+  def code_change(old_vsn, state, _extra) do
+    Logger.warning("Running Hotupgrade for #{__MODULE__} old-version: #{old_vsn}")
+    {:ok, state}
   end
 
   ### ==========================================================================
