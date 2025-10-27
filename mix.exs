@@ -4,8 +4,8 @@ defmodule Myphoenixapp.MixProject do
   def project do
     [
       app: :myphoenixapp,
-      version: "0.3.0",
-      elixir: "~> 1.14",
+      version: "0.4.0",
+      elixir: "~> 1.19",
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
@@ -24,7 +24,7 @@ defmodule Myphoenixapp.MixProject do
   def application do
     [
       mod: {Myphoenixapp.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :observer, :mnesia]
     ]
   end
 

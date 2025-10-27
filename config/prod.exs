@@ -10,13 +10,7 @@ import Config
 # Since the application is using the Hot upgrade, the manifest cannot be static
 config :myphoenixapp, MyphoenixappWeb.Endpoint,
   # Added for testing
-  check_origin: false,
-  live_reload: [
-    patterns: [
-      ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
-      ~r"priv/gettext/.*(po)$"
-    ]
-  ]
+  check_origin: false
 
 # Configures Swoosh API Client
 config :swoosh, api_client: Swoosh.ApiClient.Finch, finch_name: Myphoenixapp.Finch
