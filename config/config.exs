@@ -60,8 +60,8 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
-# Configure Observer Web retention time for 5 minutes
-config :observer_web, ObserverWeb.Telemetry,
+# Configure Observer Web retention time for 1h
+config :observer_web,
   data_retention_period: :timer.minutes(60),
   mode: :broadcast
 
